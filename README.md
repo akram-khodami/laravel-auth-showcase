@@ -4,7 +4,15 @@
 </a>
 </p>
 
-# Laravel API Authentication Comparison
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-API%20Auth-red?style=for-the-badge&logo=laravel" />
+  <img src="https://img.shields.io/badge/PHP-8.2%2B-blue?style=for-the-badge&logo=php" />
+  <img src="https://img.shields.io/badge/Auth-Sanctum%2FPassport%2FJWT-orange?style=for-the-badge" />
+</p>
+
+
+# laravel-auth-showcase
+Laravel API Authentication Comparison
 
 This repository demonstrates and compares three popular authentication methods in Laravel for building secure APIs:
 
@@ -54,8 +62,50 @@ Each branch represents one method of authentication:
 
 1. Clone the repository and switch to the desired branch:
 ```bash
-git clone https://github.com/your-username/laravel-api-auth.git
-cd laravel-api-auth
+git clone https://github.com/akram-khodami/laravel-auth-showcase.git
+cd laravel-auth-showcase
 git checkout sanctum-auth # or passport-auth / jwt-auth
+```
 
+2. Install dependencies:
+```bash
+composer install
+```
 
+ 3. Set up your .env file:
+```bash
+- php artisan key:generate
++ cp .env.example .env
++ php artisan key:generate
+```
+
+4. Set up your database:
+
+- Create a new MySQL (or other) database, e.g. `laravel_auth_showcase`
+- Open `.env` file and update the following:
+
+```env
+DB_DATABASE=laravel_auth_showcase
+DB_USERNAME=your_db_username
+DB_PASSWORD=your_db_password
+```
+
+5. Run migrations:
+```bash
+php artisan migrate
+```
+6. Seed test data(Optional) :
+   
+```bash
+php artisan db:seed
+```
+
+7. Start the development server:
+```bash
+php artisan serve
+```
+
+## License
+
+This project is open-source and available under the [MIT license](LICENSE).  
+Feel free to fork, contribute, or use it as a base for your own Laravel API projects.
