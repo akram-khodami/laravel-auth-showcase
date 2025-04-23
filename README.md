@@ -105,6 +105,12 @@ php artisan db:seed
 php artisan serve
 ```
 
+8. If you are working with the `auth-passport` branch, make sure to run the following commands to generate a personal access client and clear the cache:
+```bash
+php artisan passport:client --personal
+php artisan cache:clear
+```
+
 ## License
 
 This project is open-source and available under the [MIT license](LICENSE).  
